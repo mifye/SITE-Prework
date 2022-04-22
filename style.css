@@ -1,0 +1,240 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+/* changing heading and <p> fonts from the host default */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: cursive;
+    margin: 8px 0;
+
+  }
+
+  p {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  /* main page */
+
+  body{
+    background: url(https://cdn.glitch.global/6b8a0c84-3e66-4d91-902e-79ee7dc84465/lotus.jpeg?v=1650617319692);
+    background-size: cover; 
+    margin: 0px 0px 0px;
+    padding: auto;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .content {
+    display: flex;
+    margin: auto auto; /*change top margin if you delete toolbar */ 
+    padding: 0 16px;
+    max-width: 1100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    width: 1000px;
+  }
+
+  .card-container.colorButton {
+    margin-top: 100px;
+  }
+
+  .card-container.startStop {
+    margin-top: -200px;
+    margin-right: 20px;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 500px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    background: url(https://cdn.glitch.global/6b8a0c84-3e66-4d91-902e-79ee7dc84465/ade5280032e91455765d7d400df4741e-lotus-flower-icon-lotus-icons.png?v=1650666663207);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+ 
+
+  /* resizing & formatting for start and stop button */
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+    background: #ffffff73;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* coloring buttons */
+  #button1 {
+    border: 1px solid rgba(118, 187, 237, 0.806);
+    background-color: #7de1ff45;
+  }
+  #button1:active, #button1.lit{
+    background-color: #7de1ff5f;
+  }
+
+  #button2 {
+    border: 1px solid rgba(239, 255, 246, 0.477);
+    background-color: #ffffff5c;
+  }
+  #button2:active, #button2.lit{
+    background-color: #ffffff73;
+  }
+
+  #button3 {
+    border: 1px solid rgb(36, 225, 55);
+    background-color: #71f17c3a;
+  }
+  #button3:active, #button3.lit{
+    background-color: #71f17c49;
+  }
+  
+  #button4 {
+    border: 1px solid rgb(245, 252, 43);
+    background-color: #f0ff914f;
+  }
+  #button4:active, #button4.lit{
+    background-color: #f0ff9160;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  /* hover animation for color buttons (regular card) */
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  /* hover animation for start & stop (small card) */
+  .card-container .card.card.card-small:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+
+  
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+  }
+
+/* ripples */
+$('.ripple-ShopifyTips').ripples({
+
+  // Image Url
+  imageUrl: null,
+
+  // The width and height of the WebGL texture to render to. 
+  // The larger this value, the smoother the rendering and the slower the ripples will propagate.
+  resolution: 256,
+
+  // The size (in pixels) of the drop that results by clicking or moving the mouse over the canvas.
+  dropRadius: 20,
+
+  // Basically the amount of refraction caused by a ripple. 
+  // 0 means there is no refraction.
+  perturbance: 0.04,
+
+  // Whether mouse clicks and mouse movement triggers the effect.
+  interactive: true,
+
+  // The crossOrigin attribute to use for the affected image. 
+  crossOrigin: ''
+  
+});
