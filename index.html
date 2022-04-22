@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Zen Memory</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  
+  <body>
+
+    <div class="header">
+      <h1>ZenMemory</h1>
+      <p>A calm space to passively practice your memory :)</p>
+    </div>
+    
+  <!-- main body -->
+  <div class="content">
+
+
+    <input type="hidden" #selection>
+
+    <!-- div for start & stop button area -->
+    <div class="card-container startStop">
+
+      <!-- start and stop buttons -->
+      <button id="startBtn" class="card card-small" onclick="startGame()">
+        <span>Start</span>
+      </button>
+
+      <button id="stopBtn" class="card card-small hidden" onclick="stopGame()">
+        <span>Stop</span>
+      </button>
+
+    </div>
+
+    <!-- div for color button area -->
+    <div class="card-container colorButton">
+
+      <!-- List of color buttons -->
+      <button class="card" id="button1" onclick="guess(1)" 
+              onmousedown="startTone(1)" onmouseup="stopTone()">
+      </button>
+
+      <button class="card" id="button2" onclick="guess(2)"
+              onmousedown="startTone(2)" onmouseup="stopTone()">
+      </button>
+
+      <button class="card" id="button3" onclick="guess(3)"
+              onmousedown="startTone(3)" onmouseup="stopTone()">
+      </button>
+
+      <button class="card" id="button4" onclick="guess(4)"
+              onmousedown="startTone(4)" onmouseup="stopTone()">
+      </button>
+
+    </div>
+    </div>
+  </body>
+ </html>
