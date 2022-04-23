@@ -85,7 +85,7 @@ I guess I already kind of adressed this topic but the idea for Zen Memory was to
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+My 5-minute Interview Recording: https://youtu.be/WDL7IzvF3Lc
 
 
 ## License
